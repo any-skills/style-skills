@@ -1,0 +1,75 @@
+/* keycap-style · primary color palettes
+   Load after tokens.css. Select with <html data-palette="teal|blue|gold">.
+   Default (no attribute) = violet.
+
+   Each palette provides a 300–700 scale and maps:
+   --primary / --primary-hover / --primary-edge / --primary-contrast / --primary-muted
+   (--primary-contrast is the text color on primary fills; --primary-foreground is
+   left untouched because other tokens such as --text-inverse depend on it.)
+*/
+
+:root,
+[data-palette="violet"] {
+  --palette-300: oklch(0.848 0.082 295.5);
+  --palette-400: oklch(0.80 0.10 295);
+  --palette-500: oklch(0.72 0.115 294.5);
+  --palette-600: oklch(0.643 0.123 294.3);
+  --palette-700: oklch(0.55 0.12 294);
+
+  --primary: var(--palette-300);
+  --primary-hover: var(--palette-400);
+  --primary-edge: var(--palette-600);
+  --primary-contrast: var(--color-gray-900, oklch(0.202 0.005 67.5));
+  --primary-muted: color-mix(in oklab, var(--palette-300) 22%, transparent);
+}
+
+/* Teal — calm, muted green */
+[data-palette="teal"] {
+  --palette-300: #6fcabe;
+  --palette-400: #4fb5a8;
+  --palette-500: #3d9b8f;
+  --palette-600: #2e8579;
+  --palette-700: #1f6f65;
+
+  --primary: var(--palette-500);
+  --primary-hover: var(--palette-400);
+  --primary-edge: var(--palette-700);
+  --primary-contrast: #ffffff;
+  --primary-muted: rgba(61, 155, 143, 0.18);
+}
+
+/* Blue — neutral tool blue */
+[data-palette="blue"] {
+  --palette-300: #7eaaff;
+  --palette-400: #5b93ff;
+  --palette-500: #4a82ee;
+  --palette-600: #3f74dd;
+  --palette-700: #2d5fc2;
+
+  --primary: var(--palette-400);
+  --primary-hover: var(--palette-500);
+  --primary-edge: var(--palette-700);
+  --primary-contrast: #ffffff;
+  --primary-muted: rgba(91, 147, 255, 0.14);
+}
+
+/* Gold — premium / commerce */
+[data-palette="gold"] {
+  --palette-300: #f0c24a;
+  --palette-400: #e0aa1a;
+  --palette-500: #c99400;
+  --palette-600: #b8860b;
+  --palette-700: #8a6600;
+
+  --primary: var(--palette-500);
+  --primary-hover: var(--palette-600);
+  --primary-edge: var(--palette-700);
+  --primary-contrast: #ffffff;
+  --primary-muted: rgba(201, 148, 0, 0.12);
+}
+
+/* Elements filled with the primary color */
+.btn-primary,
+.pager button[aria-current="page"],
+.cal-grid button[aria-selected="true"] { color: var(--primary-contrast); }
+.btn-primary:hover:not(:disabled) { background: var(--primary-hover); }

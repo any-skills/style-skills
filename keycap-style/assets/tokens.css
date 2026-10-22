@@ -1,0 +1,110 @@
+/* keycap-style · design tokens (dark) */
+@font-face {
+  font-family: "GeistSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@5.2.8/latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "GeistSans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/geist-sans@5.2.8/latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  /* Dark tokens */
+  --color-gray-900: oklch(0.202 0.005 67.5);
+  --color-violet-300: oklch(0.848 0.082 295.5);
+  --color-peach-300: oklch(0.858 0.088 52.7);
+  --color-charcoal-100: oklch(0.566 0.011 267.3);
+  --color-charcoal-200: oklch(0.467 0.003 264.5);
+  --color-charcoal-300: oklch(0.435 0.004 264.5);
+  --color-charcoal-400: oklch(0.39 0.004 264.5);
+  --color-charcoal-500: oklch(0.333 0.004 264.5);
+  --color-charcoal-600: oklch(0.309 0.004 264.5);
+  --color-charcoal-800: oklch(0.277 0.004 264.5);
+  --color-charcoal-900: oklch(0.255 0.002 247.9);
+  --color-charcoal-1100: oklch(0.218 0.004 264.5);
+  --color-green-300: oklch(0.85 0.1 148);
+  --color-amber-300: oklch(0.89 0.12 90);
+  --color-red-300: oklch(0.831 0.096 12);
+
+  --background: var(--color-charcoal-900);
+  --foreground: #ffffff;
+  --card: var(--color-charcoal-800);
+  --surface: var(--color-charcoal-600);
+  --primary: var(--color-violet-300);
+  --primary-foreground: var(--color-gray-900);
+  --primary-edge: oklch(0.643 0.123 294.3);
+  --peach-edge: oklch(0.638 0.097 51.6);
+  --destructive-edge: oklch(0.574 0.137 15);
+  --secondary: var(--color-charcoal-300);
+  --highlight: var(--color-charcoal-400);
+  --muted-foreground: color-mix(in oklab, white 50%, transparent);
+  --peach: var(--color-peach-300);
+  --destructive: var(--color-red-300);
+  --success: var(--color-green-300);
+  --warning: var(--color-amber-300);
+  --border: var(--color-charcoal-1100);
+  --ring: var(--color-charcoal-100);
+  --input: var(--color-charcoal-500);
+  --input-focus: var(--color-charcoal-200);
+  --edge: var(--color-gray-900);
+  --nav-hover: color-mix(in oklab, oklch(0.2 0.006 271.1) 25%, transparent);
+  --row-hover: color-mix(in oklab, oklch(0.2 0.006 271.1) 15%, transparent);
+
+  --text-primary: var(--foreground);
+  --text-secondary: var(--muted-foreground);
+  --text-inverse: var(--primary-foreground);
+  --focus-ring: var(--ring);
+  --surface-base: var(--background);
+  --surface-muted: var(--input);
+  --surface-raised: var(--surface);
+  --surface-strong: var(--card);
+  --border-default: var(--border);
+  --accent: var(--primary);
+  --danger: var(--destructive);
+  --danger-surface: color-mix(in oklab, var(--destructive) 22%, var(--card));
+  --ok: var(--success);
+  --ok-surface: color-mix(in oklab, var(--success) 18%, var(--card));
+  --warn: var(--warning);
+
+  --font: "GeistSans", "GeistSans Fallback", ui-sans-serif, system-ui, sans-serif;
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 20px;
+  --lh: 1.5;
+
+  --r-xs: 2px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-2xl: 16777200px;
+
+  --s1: 2px;
+  --s2: 4px;
+  --s3: 8px;
+  --s4: 10px;
+  --s5: 12px;
+  --s6: 14px;
+  --s7: 20px;
+  --s8: 24px;
+  --s9: 32px;
+  --s10: 88px;
+
+  --shadow-xs: 0 1px 0 0 var(--edge);
+  --shadow-sm: 0 2px 0 0 var(--edge);
+  --shadow-md: 0 3px 0 0 var(--edge);
+  --shadow-1: var(--shadow-sm);
+  --shadow-2: none;
+  --shadow-3: var(--shadow-xs);
+  --shadow-4: var(--shadow-sm);
+  --dur-instant: 150ms;
+  --dur-fast: 200ms;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
